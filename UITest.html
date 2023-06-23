@@ -21,14 +21,8 @@
             let k = parseInt(document.getElementById("k").value);
 
             // check if inputs are valid
-            if (s.length === 0 || isNaN(k)) {
-                alert("Please enter valid inputs.");
-                return;
-            }
-
-            // check if input is uppercase letters only
-            if (!/^[A-Z]+$/.test(s)) {
-                alert("Please enter uppercase letters only.");
+            if (s.length === 0 || isNaN(k) || s.length > 105 || !/^[A-Z]+$/.test(s)) {
+                alert("Please enter valid inputs: s should consist of only uppercase English letters and have length between 1 and 105, and k should be a non-negative integer.");
                 return;
             }
 
